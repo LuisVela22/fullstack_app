@@ -1,0 +1,43 @@
+# version: '4.0'
+
+services:
+    backend:
+        build: ./server
+        ports:
+            - "3001:3001"
+        # depends_on:
+            # - mongo
+        volumes:
+        #  Sincroniza la carpeta backend en tu PC con /app dentro del contenedor, para que los cambios en el código se reflejen sin necesidad de reconstruir la imagen.
+            - ./server:/app 
+        # vita sobreescribir node_modules con el sistema de archivos del host, ya que los módulos deben instalarse dentro del contenedor.
+            - /app/node_modules
+    
+    frontend:
+        build: ./client
+        ports:
+            - "5173:5173"
+        depends_on:
+            - backend
+        volumes:
+        #  Sincroniza la carpeta frontend en tu PC con /app dentro del contenedor, para que los cambios en el código se reflejen sin necesidad de reconstruir la imagen.
+            - ./client:/app
+        # vita sobreescribir node_modules con el sistema de archivos del host, ya que los módulos deben instalarse dentro del contenedor.
+            - /app/node_modules
+    
+#     mongo:
+#         image: mongo:latest
+#         restart: always
+#         ports:
+#             # puerto que usa mongo por defecto
+#             - "27017:27017"
+#         volumes:
+#             # Volumen persistente para que los datos no se pierdan al reiniciar los contenedores.
+#             - mongo-data:/data/db
+
+
+# # Define un volumen llamado mongo_data para guardar la base de datos de MongoDB.
+# # Así, aunque el contenedor se detenga o reinicie, los datos se mantienen.
+# volumes:
+#   mongo_data:
+            
