@@ -8,7 +8,7 @@ import bcrypt from 'bcryptjs';
 // import jwt from 'jsonwebtoken';
 import { buildPDF } from '../libs/pdfKit.js'
 import createAccessToken from '../libs/jwt.js';
-import { SALT_ROUNDS, expiration, SECRET_JWT_KEY } from '../config.js';
+import { SALT_ROUNDS } from '../config.js';
 
 
 class AdminController {
