@@ -33,9 +33,9 @@ function ProfileInstructor() {
             text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
             style={{ width: '18rem' }}
           >
-            <Card.Header>Frase Inspiradora</Card.Header>
+            {/* <Card.Header>Frase Inspiradora</Card.Header> */}
             <Card.Body>
-              <Card.Title>{variant} Inspiración</Card.Title>
+              {/* <Card.Title>{variant} Inspiración</Card.Title> */}
               <Card.Text>
                 {frasesInspiracion[index % frasesInspiracion.length]}
               </Card.Text>

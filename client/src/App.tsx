@@ -4,7 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/haeder/Header';
 // import Login from './pages/Login';
 // import Home from './pages/Home';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import Cuerpo from './components/cuerpo/Cuerpo';
 import Form from './components/form/Form';
 import AuthProvider from './context/AuthContextAdmin';
@@ -18,7 +18,7 @@ import FormEvent from './components/Admin/FormEvent';
 import EventsList from './components/cuerpo/EventsList';
 import CompletedEvents from './components/cuerpo/CompletedEvents';
 import Participantes from './components/cuerpo/Participantes';
-import ReconocimientoID from './pages/admin/ReconocimientoId';
+import ReconocimientoID from './pages/admin/ReconocimientoID';
 
 // import { Placeholder } from 'react-bootstrap';
 
@@ -36,15 +36,15 @@ function App() {
     { name: 'password', type: 'text', label: 'Password', placeholder: 'Password' }
   ];
 
-  const registerInputs = [
-    { name: 'name', type: 'text', label: 'Nombre', placeholder: 'Nombre' },
-    { name: 'lastName', type: 'text', label: 'Apellido Paterno', placeholder: 'Apellido' },
-    { name: 'lastName1', type: 'text', label: 'Apellido Materno', placeholder: 'Apellido' },
-    { name: 'username', type: 'text', label: 'Nombre de Usuario', placeholder: 'Username' },
-    { name: 'password', type: 'password', label: 'Contraseña', placeholder: 'Password' },
-    { name: 'email', type: 'email', label: 'Email', placeholder: 'Ej: nombre@dominio.com' },
-    { name: 'birthdate', type: 'date', label: 'Fecha de Nacimiento', placeholder: 'Birth' }
-  ];
+  // const registerInputs = [
+  //   { name: 'name', type: 'text', label: 'Nombre', placeholder: 'Nombre' },
+  //   { name: 'lastName', type: 'text', label: 'Apellido Paterno', placeholder: 'Apellido' },
+  //   { name: 'lastName1', type: 'text', label: 'Apellido Materno', placeholder: 'Apellido' },
+  //   { name: 'username', type: 'text', label: 'Nombre de Usuario', placeholder: 'Username' },
+  //   { name: 'password', type: 'password', label: 'Contraseña', placeholder: 'Password' },
+  //   { name: 'email', type: 'email', label: 'Email', placeholder: 'Ej: nombre@dominio.com' },
+  //   { name: 'birthdate', type: 'date', label: 'Fecha de Nacimiento', placeholder: 'Birth' }
+  // ];
 
 
   const homeLinks = [

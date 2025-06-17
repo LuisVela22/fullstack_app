@@ -10,7 +10,7 @@ COPY package.json package-lock.json ./
 #para construir las dependencias de nuestro proyecto
 RUN npm install
 
-#copiar el resto del codigo
+#copiar el resto del codigo 
 COPY . .
 # RUN npm run build
 
